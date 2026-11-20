@@ -295,35 +295,12 @@ function EditorialPortfolio() {
   const closeMenu = () => setMenuOpen(false);
 
   const downloadResume = () => {
-    const resume = `ARYAN SINGH — DATA ANALYST
-
-PROFILE
-Data analyst with 3.5+ years of experience turning complex operational and commercial datasets into clear, actionable business decisions.
-
-EXPERTISE
-SQL, Python, Power BI, Pandas, NumPy, Excel, Exploratory Data Analysis, ETL Optimization, Regression & Bayesian Modeling
-
-EXPERIENCE
-Data Analyst — Rozana, 2026–Present
-Data Analyst & Senior Developer — Tata Consultancy Services (TCS), 2023–2026
-
-KEY HIGHLIGHTS
-- Built an interactive Retail Sales Dashboard in Power BI improving reporting efficiency by 40% and reducing manual analysis by 35%.
-- Audited and cleaned a 152,000-row inventory dataset, resolving 380 structurally missing records and 656 duplicates.
-- Delivered cost-optimization and marketing ROI insights using SQL, Python, regression, and Bayesian modeling.
-
-EDUCATION
-B.Tech in Computer Science & Engineering — SRM Institute of Science and Technology (8.78 CGPA)
-
-CONTACT
-LinkedIn: https://www.linkedin.com/in/singharyan-`;
-    const blob = new Blob([resume], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-    link.href = url;
-    link.download = "Aryan-Singh-Data-Analyst-Resume.txt";
+    link.href = "/Aryan-Singh-Resume.pdf";
+    link.download = "Aryan-Singh-Resume.pdf";
+    document.body.appendChild(link);
     link.click();
-    URL.revokeObjectURL(url);
+    document.body.removeChild(link);
   };
 
   return (
@@ -424,13 +401,18 @@ LinkedIn: https://www.linkedin.com/in/singharyan-`;
         <div className="motion-ticker mt-8" aria-label="Areas of expertise">
           <div className="motion-ticker-track">
             {[...Array(2)].flatMap((_, group) =>
-              ["SQL", "Python", "Power BI", "Data Validation", "ETL Pipelines", "Statistical Modeling"].map(
-                (item) => (
-                  <span key={`${group}-${item}`}>
-                    {item} <b>+</b>
-                  </span>
-                ),
-              ),
+              [
+                "SQL",
+                "Python",
+                "Power BI",
+                "Data Validation",
+                "ETL Pipelines",
+                "Statistical Modeling",
+              ].map((item) => (
+                <span key={`${group}-${item}`}>
+                  {item} <b>+</b>
+                </span>
+              )),
             )}
           </div>
         </div>
