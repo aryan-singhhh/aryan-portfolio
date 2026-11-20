@@ -391,7 +391,7 @@ LinkedIn: https://www.linkedin.com/in/singharyan-`;
           <div data-reveal data-reveal-delay="1" className="max-w-md pb-2 lg:justify-self-end">
             <p className="text-xl leading-relaxed text-[#4f4f4b]">
               I’m Aryan, a data analyst who turns messy operational datasets into clear
-              answers—and answers into measurable business performance.
+              answers and answers into measurable business performance.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#work" className="button-primary">
